@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -5,9 +7,17 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: white;
+    --foreground: #0c2461;
+    --color-primary: #b71540;
+    --color-secondary: #0a3d62;
+    --color-accent: #f6b93b;
   }
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-accent);
 }
 
 html,
@@ -28,6 +38,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -39,4 +50,132 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+button {
+  min-width: 5rem;
+  cursor: pointer;
+  height: 1.75rem;
+  transition: all 0.5s ease;
+  background: var(--color-primary);
+  color: var(--color-accent);
+  border: none;
+  font-weight: bold;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul li {
+  box-shadow: 0 0 5px #ccc;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0.75rem;
+  align-items: center;
+  margin: 0 2rem 3rem 2rem;
+  min-width: 12rem;
+  max-width: 12rem;
+  max-height: 10rem;
+}
+
+ul li h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+ul li p {
+  margin-bottom: 0.75rem;
+}
+
+ul li span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 80%;
+}
+
+h1 {
+  text-align: center;
+  margin: 1rem 0 3rem 0;
+  text-transform: uppercase;
+}
+
+a {
+  transition: all 0.25s ease;
+}
+
+ul li span a:hover {
+  color: var(--color-primary);
+}
+
+.addButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addButton button {
+  font-size: 1.25em;
+  padding: 1.25rem 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: auto;
+}
+
+form button {
+  width: fit-content;
+}
+
+input, textarea {
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--color-secondary);
+  margin-bottom: 1rem;
+  width: 60%;
+  color: black;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--color-primary);
+}
+
+textarea {
+  max-width: 60%;
+  min-width: 60%;
+  min-height: 3rem;
+  max-height: 5rem;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+}
+
+form button {
+  margin-top: 2rem;
+  align-self: center;
+}
+
+.special {
+  display: flex;
+  align-items: center;
+  align-items: center;
 }
